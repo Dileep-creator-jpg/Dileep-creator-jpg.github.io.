@@ -3,245 +3,367 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pampana Dileep | Full Stack Developer Portfolio</title>
+    <title>Pampana Dileep | Master Portfolio</title>
+    <!-- Tailwind CSS Engine -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Lucide Icon Pack -->
     <script src="https://unpkg.com/lucide@latest"></script>
     <style>
-        body {
-            background-color: #030712;
-            color: #f3f4f6;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        :root {
+            --bg-matrix: #020617;
+            --neon-blue: #3b82f6;
+            --neon-purple: #a855f7;
+            --neon-emerald: #10b981;
         }
-        .tech-grid {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        body {
+            background-color: var(--bg-matrix);
+            color: #f1f5f9;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        /* Custom Master Animation Framework */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(1deg); }
+        }
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.05); }
+        }
+        .animate-float {
+            animation: float-slow 6s ease-in-out infinite;
+        }
+        .animate-glow {
+            animation: pulse-glow 8s ease-in-out infinite;
+        }
+        /* Ultra-Premium Glassmorphism & Grid Coding Overlays */
+        .cyber-grid {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
             background-size: 30px 30px;
         }
-        .glow-effect {
-            box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.2);
+        .premium-glass {
+            background: rgba(15, 23, 42, 0.45);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .premium-glass:hover {
+            border-color: rgba(59, 130, 246, 0.3);
+            box-shadow: 0 10px 40px -10px rgba(59, 130, 246, 0.15);
+            transform: translateY(-4px);
+        }
+        .image-gradient-border {
+            background: linear-gradient(135deg, var(--neon-blue), var(--neon-purple));
+            padding: 3px;
         }
     </style>
 </head>
-<body class="tech-grid min-h-screen relative overflow-x-hidden selection:bg-blue-500 selection:text-white">
+<body class="cyber-grid min-h-screen relative overflow-x-hidden selection:bg-blue-600 selection:text-white">
 
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
-    <div class="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
+    <!-- High-Fidelity Ambient Light Sources -->
+    <div class="absolute top-[-5%] left-[-10%] w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[140px] pointer-events-none animate-glow"></div>
+    <div class="absolute top-[30%] right-[-10%] w-[700px] h-[700px] bg-purple-600/5 rounded-full blur-[160px] pointer-events-none animate-glow" style="animation-delay: 2s;"></div>
+    <div class="absolute bottom-[10%] left-[10%] w-[500px] h-[500px] bg-emerald-600/5 rounded-full blur-[130px] pointer-events-none animate-glow" style="animation-delay: 4s;"></div>
 
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/70 backdrop-blur-md border-b border-gray-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="text-xl font-bold tracking-tight bg-gradient-to-r Gods from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                DILEEP<span class="text-white font-light">.DEV</span>
-            </span>
-            <div class="flex items-center gap-6 text-sm font-medium text-gray-400">
-                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
-                <a href="mailto:dileeppampana@gmail.com" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-all transform hover:-translate-y-0.5 text-xs tracking-wide">CONTACT ME</a>
+    <!-- Navigation Core Matrix -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/60 backdrop-blur-xl border-b border-slate-900/80">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="text-xl font-black tracking-widest text-white group">
+                DILEEP<span class="text-blue-500 transition-colors group-hover:text-purple-400">.ARCHITECT</span>
+            </a>
+            <div class="hidden md:flex items-center gap-8 text-sm font-bold tracking-wider text-slate-400">
+                <a href="#about" class="hover:text-white transition-colors">About</a>
+                <a href="#skills" class="hover:text-white transition-colors">Skills</a>
+                <a href="#architecture" class="hover:text-white transition-colors">Systems</a>
+                <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-white transition-colors">Experience</a>
+                <a href="mailto:dileeppampana@gmail.com" class="bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-500 hover:to-indigo-500 text-white px-5 py-2.5 rounded-xl font-black tracking-widest transition-all transform hover:-translate-y-0.5 shadow-lg shadow-blue-600/20 text-xs">
+                    INITIALIZE RUNTIME
+                </a>
             </div>
         </div>
     </nav>
 
-    <header class="max-w-5xl mx-auto px-6 pt-36 pb-20 flex flex-col items-start justify-center min-h-[85vh]">
-        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span> Available for Opportunities
-        </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
-            Hi, I am <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Pampana Dileep</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-400 font-medium max-w-2xl mb-8 leading-relaxed">
-            Full Stack Software Developer & BTech Graduate. Crafting robust backend architectures and dynamic user experiences.
-        </p>
-        
-        <div class="flex flex-wrap gap-4 mb-12">
-            <a href="mailto:dileeppampana@gmail.com" class="flex items-center gap-2 bg-white text-gray-950 font-bold px-6 py-3 rounded-xl hover:bg-gray-200 transition-all transform hover:-translate-y-1 glow-effect">
-                <i data-lucide="mail" class="w-4 h-4"></i> Get in Touch
-            </a>
-            <a href="https://linkedin.com/in/Dileep3" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-800 px-5 py-3 rounded-xl hover:bg-gray-800 transition-all text-gray-300">
-                <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i> LinkedIn
-            </a>
-            <a href="https://github.com/Dileep-creator-jpg" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-800 px-5 py-3 rounded-xl hover:bg-gray-800 transition-all text-gray-300">
-                <i data-lucide="github" class="w-4 h-4 text-purple-400"></i> GitHub
-            </a>
+    <!-- Master Interactive Hero Layout Section -->
+    <header class="max-w-6xl mx-auto px-6 pt-44 pb-28 min-h-screen flex flex-col justify-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Narrative Column -->
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-4 py-2 rounded-full text-blue-400 text-xs font-black uppercase tracking-widest">
+                    <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span> Core Stack Deployment Active
+                </div>
+                <p class="text-xs font-black tracking-[0.4em] text-slate-500 uppercase">2025 BTech Computer Science Graduate</p>
+                <h1 class="text-5xl md:text-7xl font-black tracking-tighter text-white leading-none">
+                    Pampana <br><span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-500 bg-clip-text text-transparent">Dileep</span>
+                </h1>
+                <p class="text-lg text-slate-400 font-medium max-w-xl leading-relaxed">
+                    Full-Stack Software Engineer executing distributed logic patterns across Java enterprise suites, Python environments, and highly responsive user layouts.
+                </p>
+                
+                <!-- Micro-Action Anchor Pipelines -->
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="mailto:dileeppampana@gmail.com" class="flex items-center gap-2 bg-white text-slate-950 font-black text-sm px-6 py-4 rounded-xl hover:bg-slate-200 transition-all transform hover:-translate-y-1 shadow-xl">
+                        <i data-lucide="mail" class="w-4 h-4"></i> Establish Connection
+                    </a>
+                    <a href="https://linkedin.com/in/Dileep3" target="_blank" class="flex items-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 px-5 py-4 rounded-xl transition-all text-slate-300 hover:text-white">
+                        <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i> LinkedIn Link
+                    </a>
+                    <a href="https://github.com/Dileep-creator-jpg" target="_blank" class="flex items-center gap-2 bg-slate-900/60 hover:bg-slate-900 border border-slate-800 px-5 py-4 rounded-xl transition-all text-slate-300 hover:text-white">
+                        <i data-lucide="github" class="w-4 h-4 text-purple-400"></i> GitHub Engine
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Visual Image Node Column (Your Photo Location) -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end animate-float">
+                <div class="relative group">
+                    <!-- Layered Neon Back-Glow Background Effect -->
+                    <div class="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-600 rounded-3xl blur-2xl opacity-20 group-hover:opacity-40 transition-opacity"></div>
+                    <div class="image-gradient-border rounded-3xl overflow-hidden shadow-2xl relative z-10">
+                        <img src="Dileep.jpeg" alt="Pampana Dileep Profile Photo" class="w-72 h-96 object-cover bg-slate-900 rounded-[21px] transition-transform duration-700 group-hover:scale-105" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\'w-72 h-96 bg-slate-900 flex flex-col items-center justify-center text-slate-500 p-6 text-center\'><i data-lucide=\'user\' class=\'w-12 h-12 mb-3 text-blue-500 animate-pulse\'></i><p class=\'text-xs font-mono\'>Add Dileep.jpeg to your repository root folder to display photo here</p></div>'; lucide.createIcons();">
+                    </div>
+                    <!-- Frame Layout Tags -->
+                    <div class="absolute bottom-4 left-4 z-20 bg-slate-950/80 border border-slate-800/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-[10px] font-mono tracking-widest uppercase text-slate-400">
+                        SYSTEM_USER_01 // ACTIVE
+                    </div>
+                </div>
+            </div>
+
         </div>
 
-        <div class="flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-gray-500 border-t border-gray-900 pt-8 w-full">
-            <div><span class="text-white block text-lg font-bold">2025</span> Graduate Class</div>
-            <div><span class="text-white block text-lg font-bold">First Class</span> Distinction</div>
-            <div><span class="text-white block text-lg font-bold">Eluru, IN</span> Location</div>
+        <!-- Metric Data Analytics Bar Layout -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-slate-900 pt-12 mt-20 w-full text-sm">
+            <div><span class="text-slate-500 block font-bold uppercase tracking-widest text-[10px] mb-1">Status Verification</span><span class="font-bold text-white text-base">Class of 2025</span></div>
+            <div><span class="text-slate-500 block font-bold uppercase tracking-widest text-[10px] mb-1">Academic Stratum</span><span class="font-bold text-emerald-400 text-base">First Class Honor</span></div>
+            <div><span class="text-slate-500 block font-bold uppercase tracking-widest text-[10px] mb-1">Network Hub Address</span><span class="font-bold text-white text-base">Eluru, India</span></div>
+            <div><span class="text-slate-500 block font-bold uppercase tracking-widest text-[10px] mb-1">Data Pipeline Routing</span><span class="font-bold text-white text-base">+91 9347298567</span></div>
         </div>
     </header>
 
-    <main class="max-w-5xl mx-auto px-6 space-y-32 pb-32">
+    <!-- Core Interactive Operations Section Containers -->
+    <main class="max-w-6xl mx-auto px-6 space-y-40 pb-40">
 
-        <section id="about" class="grid md:grid-columns grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <!-- Section 1: Objective Structural Narrative -->
+        <section id="about" class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
             <div class="md:col-span-1">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-500 mb-2">Objective</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Career Vision</p>
+                <h2 class="text-xs font-black uppercase tracking-widest text-blue-500 mb-2">// 01 // Structural Intent</h2>
+                <p class="text-3xl font-black tracking-tight text-white">Career Directive</p>
             </div>
-            <div class="md:col-span-2 text-lg text-gray-400 leading-relaxed space-y-4">
+            <div class="md:col-span-2 premium-glass p-8 rounded-2xl text-slate-400 leading-relaxed text-lg">
                 <p>
-                    Motivated Computer Science graduate seeking a Software Developer / Full Stack Developer role. I thrive on applying logic to build scalable applications, solving core engineering real-world problems, and contributing directly to business and organizational growth workflows.
+                    Targeting an agile integration role within a modern software environment. Fully equipped with an optimized computational logic skillset built across core programming paradigms, decoupled microservice systems, relational databases, and interactive web tech platforms. Driven to engineer performant runtime architectures that systematically optimize business and structural data pipelines.
                 </p>
             </div>
         </section>
 
+        <!-- Section 2: Specialized Technical Array Framework Matrix -->
         <section id="skills">
             <div class="mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-2">Capabilities</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Technical Arsenal</p>
+                <h2 class="text-xs font-black uppercase tracking-widest text-purple-500 mb-2">// 02 // Functional Capability Modules</h2>
+                <p class="text-3xl font-black tracking-tight text-white">Engineering Capabilities</p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-gray-900/40 border border-gray-800 p-6 rounded-2xl hover:border-blue-500/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4">
+                <!-- Stack Module Card: Systems Languages -->
+                <div class="premium-glass p-6 rounded-2xl group">
+                    <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-6 group-hover:rotate-6 transition-transform">
                         <i data-lucide="code-2"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Core Programming</h3>
+                    <h3 class="text-lg font-black text-white mb-4 tracking-tight">Core Programming</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Java (OOP)</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Python</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Golang</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">C</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-blue-400 font-medium">AI Prompting</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">Java (OOP Suite)</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">Python</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">Golang</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">C Architecture</span>
+                        <span class="bg-blue-950/40 border border-blue-800/60 px-3 py-1.5 rounded-lg text-xs font-bold text-blue-400">AI Prompting Engine</span>
                     </div>
                 </div>
 
-                <div class="bg-gray-900/40 border border-gray-800 p-6 rounded-2xl hover:border-indigo-500/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-4">
-                        <i data-lucide="layers"></i>
+                <!-- Stack Module Card: Interface Realization Layer -->
+                <div class="premium-glass p-6 rounded-2xl group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:rotate-6 transition-transform">
+                        <i data-lucide="monitor"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Web Stack & Database</h3>
+                    <h3 class="text-lg font-black text-white mb-4 tracking-tight">Web Technology Stack</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">JavaScript</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">React.js Fundamentals</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">HTML5 / CSS3</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">MySQL Database</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">JavaScript</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">React.js Foundations</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">HTML5 / CSS3 Layouts</span>
+                        <span class="bg-purple-950/40 border border-purple-800/60 px-3 py-1.5 rounded-lg text-xs font-bold text-purple-400">MySQL Relational DB</span>
                     </div>
                 </div>
 
-                <div class="bg-gray-900/40 border border-gray-800 p-6 rounded-2xl hover:border-purple-500/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4">
+                <!-- Stack Module Card: Operational Pipelines -->
+                <div class="premium-glass p-6 rounded-2xl group">
+                    <div class="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:rotate-6 transition-transform">
                         <i data-lucide="terminal"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Systems & Tools</h3>
+                    <h3 class="text-lg font-black text-white mb-4 tracking-tight">Systems & Environments</h3>
                     <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Linux Command Line</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Git / GitHub</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Data Structures</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">SDLC Fundamentals</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">VS Code / Eclipse</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">Linux Bash Shell CLI</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">Windows Ecosystems</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">Git / GitHub Tracking</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">Data Structures & Logic</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">SDLC Methodologies</span>
+                        <span class="bg-slate-950/80 px-3 py-1.5 rounded-lg text-xs font-medium text-slate-300 border border-slate-900">VS Code / Eclipse Tooling</span>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- BRAND NEW SECTION 3: Systems Architecture Operational Breakdown -->
+        <section id="architecture">
+            <div class="mb-12">
+                <h2 class="text-xs font-black uppercase tracking-widest text-emerald-500 mb-2">// 03 // Production Systems Paradigm</h2>
+                <p class="text-3xl font-black tracking-tight text-white">Core Engineering Fundamentals</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-slate-900/30 border border-slate-900 p-6 rounded-xl hover:bg-slate-900/50 transition-colors">
+                    <div class="text-blue-500 text-xs font-mono mb-2">01 // NETWORKING</div>
+                    <h4 class="text-base font-bold text-white mb-2">Computer Network Systems</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Implementing strict layer protocols for fast data flow, data package validation, and safe server-to-client operations.</p>
+                </div>
+                <div class="bg-slate-900/30 border border-slate-900 p-6 rounded-xl hover:bg-slate-900/50 transition-colors">
+                    <div class="text-purple-500 text-xs font-mono mb-2">02 // ARCHITECTURE</div>
+                    <h4 class="text-base font-bold text-white mb-2">Data Structures & Logic</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Designing optimized data layouts, algorithmic complexity routines ($O(n)$ space-time tuning), and custom object parsing models.</p>
+                </div>
+                <div class="bg-slate-900/30 border border-slate-900 p-6 rounded-xl hover:bg-slate-900/50 transition-colors">
+                    <div class="text-indigo-500 text-xs font-mono mb-2">03 // FLOW MANAGEMENT</div>
+                    <h4 class="text-base font-bold text-white mb-2">SDLC Infrastructure</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Managing software progression from requirements tracking and testing down to strict compilation version control routines.</p>
+                </div>
+                <div class="bg-slate-900/30 border border-slate-900 p-6 rounded-xl hover:bg-slate-900/50 transition-colors">
+                    <div class="text-emerald-500 text-xs font-mono mb-2">04 // DATA MUTATION</div>
+                    <h4 class="text-base font-bold text-white mb-2">MySQL Data Schema</h4>
+                    <p class="text-xs text-slate-400 leading-relaxed">Structuring transactional database setups, query handling routines, relationship mappings, and data access layers.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Production Application Pipelines -->
         <section id="projects">
             <div class="mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-purple-500 mb-2">Portfolio</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Featured Architecture</p>
+                <h2 class="text-xs font-black uppercase tracking-widest text-blue-500 mb-2">// 04 // Application Repositories</h2>
+                <p class="text-3xl font-black tracking-tight text-white">Executed Technical Deployments</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="group bg-gray-900/20 border border-gray-800 rounded-3xl overflow-hidden hover:border-gray-700 transition-all flex flex-col justify-between">
+                <!-- Project Module Container 1: Deep Learning System -->
+                <div class="premium-glass rounded-3xl overflow-hidden flex flex-col justify-between">
                     <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 px-2.5 py-1 rounded-md">Python Full Stack</span>
-                            <span class="text-sm font-medium text-gray-500">Role: Software Developer</span>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-[10px] font-black tracking-widest text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 rounded-lg">Deep Learning Analytics Matrix</span>
+                            <span class="text-xs font-mono text-slate-500">Developer Role</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Leaf Disease Detection System</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            Developed a solution to solve agricultural yield problems using deep learning models. Crafted a highly responsive frontend display utilizing Streamlit framework, displaying model prediction layers cleanly.
+                        <h3 class="text-2xl font-black text-white mb-3 tracking-tight">Leaf Disease Detection System</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Engineered a robust computer vision predictive pipeline designed within an SDLC framework to diagnose crop health anomalies. Configured neural tensor pathways to ingest data inputs and generate immediate classification statuses.
                         </p>
-                        <ul class="space-y-2 text-xs text-gray-400 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-400"></i> Achieved 94% accuracy via continuous YOLO tracking</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-400"></i> Managed code version tracking through clean Git workflows</li>
+                        <ul class="space-y-3 text-sm text-slate-400 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="chevrons-right" class="w-4 h-4 text-blue-500 mt-0.5 shrink-0"></i>
+                                <span>Attained a verified 94% statistical sorting prediction score via deep custom YOLO layer parameter configuration.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="chevrons-right" class="w-4 h-4 text-blue-500 mt-0.5 shrink-0"></i>
+                                <span>Mapped clean responsive view matrices leveraging specialized Streamlit layout frameworks.</span>
+                            </li>
                         </ul>
                     </div>
-                    <div class="px-8 pb-8 pt-0 flex gap-2">
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">Python</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">YOLO Model</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">Streamlit UI</span>
+                    <div class="p-8 pt-0 border-t border-slate-900/60 bg-slate-950/20 flex gap-2">
+                        <span class="bg-slate-950 text-slate-400 px-3 py-1 rounded-md text-xs font-mono border border-slate-900">Python</span>
+                        <span class="bg-slate-950 text-slate-400 px-3 py-1 rounded-md text-xs font-mono border border-slate-900">YOLO Models</span>
+                        <span class="bg-slate-950 text-slate-400 px-3 py-1 rounded-md text-xs font-mono border border-slate-900">Streamlit UI</span>
                     </div>
                 </div>
 
-                <div class="group bg-gray-900/20 border border-gray-800 rounded-3xl overflow-hidden hover:border-gray-700 transition-all flex flex-col justify-between">
+                <!-- Project Module Container 2: Enterprise Transaction Booking -->
+                <div class="premium-glass rounded-3xl overflow-hidden flex flex-col justify-between">
                     <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold tracking-wider text-purple-400 uppercase bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 rounded-md">Java Enterprise Stack</span>
-                            <span class="text-sm font-medium text-gray-500">Role: Full Stack Developer</span>
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-[10px] font-black tracking-widest text-purple-400 uppercase bg-purple-500/10 border border-purple-500/20 px-3 py-1.5 rounded-lg">Java Enterprise Architecture</span>
+                            <span class="text-xs font-mono text-slate-500">Full Stack Role</span>
                         </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">Tour & Travel Management System</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            Engineered a transformation schema application for user travel flows using Spring Boot and React.js frontend structures. Implemented robust enterprise components with strict role validation access controls.
+                        <h3 class="text-2xl font-black text-white mb-3 tracking-tight">Tour & Travel Management Engine</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed mb-6">
+                            Architected a digital data transformation tracking engine configured to orchestrate real-time travel and transaction workloads. Unified microservice-style data routers to connect frontend structures to strict query persistence tables.
                         </p>
-                        <ul class="space-y-2 text-xs text-gray-400 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400"></i> Engineered RESTful APIs for fast transactional communication</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400"></i> Executed unit testing suites for zero transaction downtime</li>
+                        <ul class="space-y-3 text-sm text-slate-400 mb-6">
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="chevrons-right" class="w-4 h-4 text-purple-500 mt-0.5 shrink-0"></i>
+                                <span>Engineered secure RESTful routing structures handling queries between Spring Boot layers and React.js user components.</span>
+                            </li>
+                            <li class="flex items-start gap-2.5">
+                                <i data-lucide="chevrons-right" class="w-4 h-4 text-purple-500 mt-0.5 shrink-0"></i>
+                                <span>Conducted strict transaction isolation and component integration tests to completely eliminate transaction failure states.</span>
+                            </li>
                         </ul>
                     </div>
-                    <div class="px-8 pb-8 pt-0 flex gap-2">
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">Spring Boot</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">React.js</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">MySQL</span>
+                    <div class="p-8 pt-0 border-t border-slate-900/60 bg-slate-950/20 flex gap-2">
+                        <span class="bg-slate-950 text-slate-400 px-3 py-1 rounded-md text-xs font-mono border border-slate-900">Spring Boot</span>
+                        <span class="bg-slate-950 text-slate-400 px-3 py-1 rounded-md text-xs font-mono border border-slate-900">React.js</span>
+                        <span class="bg-slate-950 text-slate-400 px-3 py-1 rounded-md text-xs font-mono border border-slate-900">MySQL Engine</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience">
-            <div class="mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-500 mb-2">History</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Experience & Certifications</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="md:col-span-2 space-y-6">
-                    <h3 class="text-sm font-bold tracking-wider uppercase text-gray-500 mb-4">Professional Roles</h3>
-                    
-                    <div class="relative border-l border-gray-800 pl-6 ml-2 space-y-8">
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-gray-950"></span>
-                            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-                                <h4 class="text-lg font-bold text-white">AI & Cloud Virtual Intern</h4>
-                                <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">June 2024 – July 2024</span>
-                            </div>
-                            <p class="text-sm font-medium text-gray-400 mb-3">IBM SkillsBuild</p>
-                            <p class="text-sm text-gray-400 leading-relaxed">
-                                Participated in daily sprints within an Agile layout setting. Built an AI-powered conversational NLP bot schema architecture, yielding a 40% response optimization rate with 85% intent validation accuracy.
-                            </p>
-                        </div>
-                    </div>
+        <!-- Section 5: Real-World Internships & Time Metrics -->
+        <section id="experience" class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+            
+            <div class="lg:col-span-2 space-y-6">
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-widest text-indigo-400 mb-2">// 05 // Industrial Production Runtime</h2>
+                    <p class="text-3xl font-black tracking-tight text-white">Experience Timeline</p>
                 </div>
 
-                <div class="md:col-span-1 space-y-4">
-                    <h3 class="text-sm font-bold tracking-wider uppercase text-gray-500 mb-4">Credentials</h3>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">C Programming</p>
-                            <p class="text-xs text-gray-500">Infosys Certification</p>
+                <div class="relative border-l-2 border-slate-900 pl-6 ml-2 space-y-8 mt-8">
+                    <!-- Experience Block Node -->
+                    <div class="relative">
+                        <span class="absolute -left-[33px] top-1 w-4 h-4 rounded-full bg-blue-500 border-4 border-slate-950 shadow-md"></span>
+                        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
+                            <h4 class="text-xl font-bold text-white">AI & Cloud Virtual Intern</h4>
+                            <span class="text-xs font-black tracking-wider text-blue-400 bg-blue-500/10 border border-blue-500/20 px-3 py-1 rounded-lg">June 2024 – July 2024</span>
                         </div>
+                        <p class="text-sm font-bold text-slate-500 mb-4">IBM SkillsBuild Platform</p>
+                        <ul class="space-y-2 text-sm text-slate-400">
+                            <li class="flex items-start gap-2"><i data-lucide="minus" class="w-4 h-4 text-blue-500 mt-1 shrink-0"></i>Participated in high-velocity structural Agile team loops, mapping production workflows inside strict sprint routines.</li>
+                            <li class="flex items-start gap-2"><i data-lucide="minus" class="w-4 h-4 text-blue-500 mt-1 shrink-0"></i>Designed an NLP-powered conversational query chatbot structure, shrinking interface processing response times by 40%.</li>
+                            <li class="flex items-start gap-2"><i data-lucide="minus" class="w-4 h-4 text-blue-500 mt-1 shrink-0"></i>Tested and debugged natural language processing sets, maintaining a verified 85% parsing classification score.</li>
+                        </ul>
                     </div>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">Python Programming</p>
-                            <p class="text-xs text-gray-500">edX Verified Suite</p>
-                        </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Certification Grid Verification Row -->
+            <div class="lg:col-span-1 space-y-6">
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-widest text-slate-500 mb-2">// System Authentication</h2>
+                    <p class="text-3xl font-black tracking-tight text-white">Credentials</p>
+                </div>
+
+                <div class="space-y-3 mt-8">
+                    <div class="premium-glass p-4 rounded-xl flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500 shrink-0"><i data-lucide="verified"></i></div>
+                        <div><p class="text-sm font-bold text-white">C Programming Core</p><p class="text-xs text-slate-500">Infosys Verification Suite</p></div>
                     </div>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">Core & Advanced Java</p>
-                            <p class="text-xs text-gray-500">IT Solutions Engine</p>
-                        </div>
+                    <div class="premium-glass p-4 rounded-xl flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500 shrink-0"><i data-lucide="verified"></i></div>
+                        <div><p class="text-sm font-bold text-white">Python Programming Core</p><p class="text-xs text-slate-500">edX Systems Core Index</p></div>
                     </div>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">Web Development</p>
-                            <p class="text-xs text-gray-500">edX Cloud Platform</p>
-                        </div>
+                    <div class="premium-glass p-4 rounded-xl flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500 shrink-0"><i data-lucide="verified"></i></div>
+                        <div><p class="text-sm font-bold text-white">Core + Advanced Java Stack</p><p class="text-xs text-slate-500">IT Solutions Certification</p></div>
+                    </div>
+                    <div class="premium-glass p-4 rounded-xl flex items-center gap-4">
+                        <div class="w-10 h-10 rounded-lg bg-yellow-500/10 flex items-center justify-center text-yellow-500 shrink-0"><i data-lucide="verified"></i></div>
+                        <div><p class="text-sm font-bold text-white">Full Web Development</p><p class="text-xs text-slate-500">edX System Platform</p></div>
                     </div>
                 </div>
             </div>
@@ -249,531 +371,13 @@
 
     </main>
 
-    <footer class="border-t border-gray-900 bg-gray-950/40 py-12 text-center text-xs text-gray-500">
-        <p class="mb-2">&copy; 2026 Pampana Dileep. All Rights Reserved.</p>
-        <p>Built with technical optimization via Tailwind CSS & Lucide Interfaces.</p>
+    <!-- Unified Master Global Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950/80 backdrop-blur-md py-12 text-center text-xs tracking-widest text-slate-500">
+        <p class="mb-2">&copy; 2026 Pampana Dileep. All Rights Reserved. Fully Compiled Full Stack System Layout Architecture.</p>
+        <p class="text-slate-600 font-light">Built with pure semantic HTML structure and modular CSS layout variables.</p>
     </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pampana Dileep | Full Stack Developer Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body {
-            background-color: #030712;
-            color: #f3f4f6;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        .tech-grid {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-        .glow-effect {
-            box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.2);
-        }
-    </style>
-</head>
-<body class="tech-grid min-h-screen relative overflow-x-hidden selection:bg-blue-500 selection:text-white">
-
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
-    <div class="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
-
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/70 backdrop-blur-md border-b border-gray-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="text-xl font-bold tracking-tight bg-gradient-to-r Gods from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                DILEEP<span class="text-white font-light">.DEV</span>
-            </span>
-            <div class="flex items-center gap-6 text-sm font-medium text-gray-400">
-                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
-                <a href="mailto:dileeppampana@gmail.com" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-all transform hover:-translate-y-0.5 text-xs tracking-wide">CONTACT ME</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="max-w-5xl mx-auto px-6 pt-36 pb-20 flex flex-col items-start justify-center min-h-[85vh]">
-        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span> Available for Opportunities
-        </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
-            Hi, I am <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Pampana Dileep</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-400 font-medium max-w-2xl mb-8 leading-relaxed">
-            Full Stack Software Developer & BTech Graduate. Crafting robust backend architectures and dynamic user experiences.
-        </p>
-        
-        <div class="flex flex-wrap gap-4 mb-12">
-            <a href="mailto:dileeppampana@gmail.com" class="flex items-center gap-2 bg-white text-gray-950 font-bold px-6 py-3 rounded-xl hover:bg-gray-200 transition-all transform hover:-translate-y-1 glow-effect">
-                <i data-lucide="mail" class="w-4 h-4"></i> Get in Touch
-            </a>
-            <a href="https://linkedin.com/in/Dileep3" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-800 px-5 py-3 rounded-xl hover:bg-gray-800 transition-all text-gray-300">
-                <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i> LinkedIn
-            </a>
-            <a href="https://github.com/Dileep-creator-jpg" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-800 px-5 py-3 rounded-xl hover:bg-gray-800 transition-all text-gray-300">
-                <i data-lucide="github" class="w-4 h-4 text-purple-400"></i> GitHub
-            </a>
-        </div>
-
-        <div class="flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-gray-500 border-t border-gray-900 pt-8 w-full">
-            <div><span class="text-white block text-lg font-bold">2025</span> Graduate Class</div>
-            <div><span class="text-white block text-lg font-bold">First Class</span> Distinction</div>
-            <div><span class="text-white block text-lg font-bold">Eluru, IN</span> Location</div>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-6 space-y-32 pb-32">
-
-        <section id="about" class="grid md:grid-columns grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            <div class="md:col-span-1">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-500 mb-2">Objective</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Career Vision</p>
-            </div>
-            <div class="md:col-span-2 text-lg text-gray-400 leading-relaxed space-y-4">
-                <p>
-                    Motivated Computer Science graduate seeking a Software Developer / Full Stack Developer role. I thrive on applying logic to build scalable applications, solving core engineering real-world problems, and contributing directly to business and organizational growth workflows.
-                </p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-2">Capabilities</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Technical Arsenal</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-gray-900/40 border border-gray-800 p-6 rounded-2xl hover:border-blue-500/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4">
-                        <i data-lucide="code-2"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Core Programming</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Java (OOP)</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Python</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Golang</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">C</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-blue-400 font-medium">AI Prompting</span>
-                    </div>
-                </div>
-
-                <div class="bg-gray-900/40 border border-gray-800 p-6 rounded-2xl hover:border-indigo-500/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-4">
-                        <i data-lucide="layers"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Web Stack & Database</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">JavaScript</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">React.js Fundamentals</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">HTML5 / CSS3</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">MySQL Database</span>
-                    </div>
-                </div>
-
-                <div class="bg-gray-900/40 border border-gray-800 p-6 rounded-2xl hover:border-purple-500/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4">
-                        <i data-lucide="terminal"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Systems & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Linux Command Line</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Git / GitHub</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Data Structures</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">SDLC Fundamentals</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">VS Code / Eclipse</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-purple-500 mb-2">Portfolio</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Featured Architecture</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="group bg-gray-900/20 border border-gray-800 rounded-3xl overflow-hidden hover:border-gray-700 transition-all flex flex-col justify-between">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 px-2.5 py-1 rounded-md">Python Full Stack</span>
-                            <span class="text-sm font-medium text-gray-500">Role: Software Developer</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Leaf Disease Detection System</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            Developed a solution to solve agricultural yield problems using deep learning models. Crafted a highly responsive frontend display utilizing Streamlit framework, displaying model prediction layers cleanly.
-                        </p>
-                        <ul class="space-y-2 text-xs text-gray-400 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-400"></i> Achieved 94% accuracy via continuous YOLO tracking</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-400"></i> Managed code version tracking through clean Git workflows</li>
-                        </ul>
-                    </div>
-                    <div class="px-8 pb-8 pt-0 flex gap-2">
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">Python</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">YOLO Model</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">Streamlit UI</span>
-                    </div>
-                </div>
-
-                <div class="group bg-gray-900/20 border border-gray-800 rounded-3xl overflow-hidden hover:border-gray-700 transition-all flex flex-col justify-between">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold tracking-wider text-purple-400 uppercase bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 rounded-md">Java Enterprise Stack</span>
-                            <span class="text-sm font-medium text-gray-500">Role: Full Stack Developer</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">Tour & Travel Management System</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            Engineered a transformation schema application for user travel flows using Spring Boot and React.js frontend structures. Implemented robust enterprise components with strict role validation access controls.
-                        </p>
-                        <ul class="space-y-2 text-xs text-gray-400 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400"></i> Engineered RESTful APIs for fast transactional communication</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400"></i> Executed unit testing suites for zero transaction downtime</li>
-                        </ul>
-                    </div>
-                    <div class="px-8 pb-8 pt-0 flex gap-2">
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">Spring Boot</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">React.js</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">MySQL</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <div class="mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-500 mb-2">History</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Experience & Certifications</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="md:col-span-2 space-y-6">
-                    <h3 class="text-sm font-bold tracking-wider uppercase text-gray-500 mb-4">Professional Roles</h3>
-                    
-                    <div class="relative border-l border-gray-800 pl-6 ml-2 space-y-8">
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-gray-950"></span>
-                            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-                                <h4 class="text-lg font-bold text-white">AI & Cloud Virtual Intern</h4>
-                                <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">June 2024 – July 2024</span>
-                            </div>
-                            <p class="text-sm font-medium text-gray-400 mb-3">IBM SkillsBuild</p>
-                            <p class="text-sm text-gray-400 leading-relaxed">
-                                Participated in daily sprints within an Agile layout setting. Built an AI-powered conversational NLP bot schema architecture, yielding a 40% response optimization rate with 85% intent validation accuracy.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:col-span-1 space-y-4">
-                    <h3 class="text-sm font-bold tracking-wider uppercase text-gray-500 mb-4">Credentials</h3>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">C Programming</p>
-                            <p class="text-xs text-gray-500">Infosys Certification</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">Python Programming</p>
-                            <p class="text-xs text-gray-500">edX Verified Suite</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">Core & Advanced Java</p>
-                            <p class="text-xs text-gray-500">IT Solutions Engine</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">Web Development</p>
-                            <p class="text-xs text-gray-500">edX Cloud Platform</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="border-t border-gray-900 bg-gray-950/40 py-12 text-center text-xs text-gray-500">
-        <p class="mb-2">&copy; 2026 Pampana Dileep. All Rights Reserved.</p>
-        <p>Built with technical optimization via Tailwind CSS & Lucide Interfaces.</p>
-    </footer>
-
-    <script>
-        lucide.createIcons();
-    </script>
-</body>
-</html><!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pampana Dileep | Full Stack Developer Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        body {
-            background-color: #030712;
-            color: #f3f4f6;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-        .tech-grid {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 30px 30px;
-        }
-        .glow-effect {
-            box-shadow: 0 0 40px -10px rgba(59, 130, 246, 0.2);
-        }
-    </style>
-</head>
-<body class="tech-grid min-h-screen relative overflow-x-hidden selection:bg-blue-500 selection:text-white">
-
-    <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -z-10 animate-pulse"></div>
-    <div class="absolute top-1/2 right-1/4 w-[500px] h-[500px] bg-purple-600/5 rounded-full blur-3xl -z-10"></div>
-
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-gray-950/70 backdrop-blur-md border-b border-gray-800">
-        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <span class="text-xl font-bold tracking-tight bg-gradient-to-r Gods from-blue-400 to-indigo-400 bg-clip-text text-transparent">
-                DILEEP<span class="text-white font-light">.DEV</span>
-            </span>
-            <div class="flex items-center gap-6 text-sm font-medium text-gray-400">
-                <a href="#about" class="hover:text-blue-400 transition-colors">About</a>
-                <a href="#skills" class="hover:text-blue-400 transition-colors">Skills</a>
-                <a href="#projects" class="hover:text-blue-400 transition-colors">Projects</a>
-                <a href="#experience" class="hover:text-blue-400 transition-colors">Experience</a>
-                <a href="mailto:dileeppampana@gmail.com" class="bg-blue-600 hover:bg-blue-500 text-white px-4 py-2 rounded-lg transition-all transform hover:-translate-y-0.5 text-xs tracking-wide">CONTACT ME</a>
-            </div>
-        </div>
-    </nav>
-
-    <header class="max-w-5xl mx-auto px-6 pt-36 pb-20 flex flex-col items-start justify-center min-h-[85vh]">
-        <div class="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 px-3 py-1.5 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider mb-6">
-            <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span> Available for Opportunities
-        </div>
-        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
-            Hi, I am <span class="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">Pampana Dileep</span>
-        </h1>
-        <p class="text-xl md:text-2xl text-gray-400 font-medium max-w-2xl mb-8 leading-relaxed">
-            Full Stack Software Developer & BTech Graduate. Crafting robust backend architectures and dynamic user experiences.
-        </p>
-        
-        <div class="flex flex-wrap gap-4 mb-12">
-            <a href="mailto:dileeppampana@gmail.com" class="flex items-center gap-2 bg-white text-gray-950 font-bold px-6 py-3 rounded-xl hover:bg-gray-200 transition-all transform hover:-translate-y-1 glow-effect">
-                <i data-lucide="mail" class="w-4 h-4"></i> Get in Touch
-            </a>
-            <a href="https://linkedin.com/in/Dileep3" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-800 px-5 py-3 rounded-xl hover:bg-gray-800 transition-all text-gray-300">
-                <i data-lucide="linkedin" class="w-4 h-4 text-blue-400"></i> LinkedIn
-            </a>
-            <a href="https://github.com/Dileep-creator-jpg" target="_blank" class="flex items-center gap-2 bg-gray-900 border border-gray-800 px-5 py-3 rounded-xl hover:bg-gray-800 transition-all text-gray-300">
-                <i data-lucide="github" class="w-4 h-4 text-purple-400"></i> GitHub
-            </a>
-        </div>
-
-        <div class="flex items-center gap-8 text-xs font-medium uppercase tracking-widest text-gray-500 border-t border-gray-900 pt-8 w-full">
-            <div><span class="text-white block text-lg font-bold">2025</span> Graduate Class</div>
-            <div><span class="text-white block text-lg font-bold">First Class</span> Distinction</div>
-            <div><span class="text-white block text-lg font-bold">Eluru, IN</span> Location</div>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-6 space-y-32 pb-32">
-
-        <section id="about" class="grid md:grid-columns grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            <div class="md:col-span-1">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-500 mb-2">Objective</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Career Vision</p>
-            </div>
-            <div class="md:col-span-2 text-lg text-gray-400 leading-relaxed space-y-4">
-                <p>
-                    Motivated Computer Science graduate seeking a Software Developer / Full Stack Developer role. I thrive on applying logic to build scalable applications, solving core engineering real-world problems, and contributing directly to business and organizational growth workflows.
-                </p>
-            </div>
-        </section>
-
-        <section id="skills">
-            <div class="mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-indigo-500 mb-2">Capabilities</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Technical Arsenal</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-gray-900/40 border border-gray-800 p-6 rounded-2xl hover:border-blue-500/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center text-blue-400 mb-4">
-                        <i data-lucide="code-2"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Core Programming</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Java (OOP)</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Python</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Golang</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">C</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-blue-400 font-medium">AI Prompting</span>
-                    </div>
-                </div>
-
-                <div class="bg-gray-900/40 border border-gray-800 p-6 rounded-2xl hover:border-indigo-500/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-400 mb-4">
-                        <i data-lucide="layers"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Web Stack & Database</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">JavaScript</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">React.js Fundamentals</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">HTML5 / CSS3</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">MySQL Database</span>
-                    </div>
-                </div>
-
-                <div class="bg-gray-900/40 border border-gray-800 p-6 rounded-2xl hover:border-purple-500/40 transition-colors">
-                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-4">
-                        <i data-lucide="terminal"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white mb-3">Systems & Tools</h3>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Linux Command Line</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Git / GitHub</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">Data Structures</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">SDLC Fundamentals</span>
-                        <span class="bg-gray-950 px-3 py-1 rounded-md border border-gray-800 text-xs text-gray-300">VS Code / Eclipse</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-purple-500 mb-2">Portfolio</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Featured Architecture</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="group bg-gray-900/20 border border-gray-800 rounded-3xl overflow-hidden hover:border-gray-700 transition-all flex flex-col justify-between">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold tracking-wider text-blue-400 uppercase bg-blue-500/10 border border-blue-500/20 px-2.5 py-1 rounded-md">Python Full Stack</span>
-                            <span class="text-sm font-medium text-gray-500">Role: Software Developer</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors">Leaf Disease Detection System</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            Developed a solution to solve agricultural yield problems using deep learning models. Crafted a highly responsive frontend display utilizing Streamlit framework, displaying model prediction layers cleanly.
-                        </p>
-                        <ul class="space-y-2 text-xs text-gray-400 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-400"></i> Achieved 94% accuracy via continuous YOLO tracking</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-blue-400"></i> Managed code version tracking through clean Git workflows</li>
-                        </ul>
-                    </div>
-                    <div class="px-8 pb-8 pt-0 flex gap-2">
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">Python</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">YOLO Model</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">Streamlit UI</span>
-                    </div>
-                </div>
-
-                <div class="group bg-gray-900/20 border border-gray-800 rounded-3xl overflow-hidden hover:border-gray-700 transition-all flex flex-col justify-between">
-                    <div class="p-8">
-                        <div class="flex items-center justify-between mb-4">
-                            <span class="text-xs font-semibold tracking-wider text-purple-400 uppercase bg-purple-500/10 border border-purple-500/20 px-2.5 py-1 rounded-md">Java Enterprise Stack</span>
-                            <span class="text-sm font-medium text-gray-500">Role: Full Stack Developer</span>
-                        </div>
-                        <h3 class="text-2xl font-bold text-white mb-3 group-hover:text-purple-400 transition-colors">Tour & Travel Management System</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                            Engineered a transformation schema application for user travel flows using Spring Boot and React.js frontend structures. Implemented robust enterprise components with strict role validation access controls.
-                        </p>
-                        <ul class="space-y-2 text-xs text-gray-400 mb-6">
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400"></i> Engineered RESTful APIs for fast transactional communication</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check-circle-2" class="w-3.5 h-3.5 text-purple-400"></i> Executed unit testing suites for zero transaction downtime</li>
-                        </ul>
-                    </div>
-                    <div class="px-8 pb-8 pt-0 flex gap-2">
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">Spring Boot</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">React.js</span>
-                        <span class="bg-gray-950 text-gray-400 px-2.5 py-1 rounded text-xs font-medium">MySQL</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience">
-            <div class="mb-12">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-emerald-500 mb-2">History</h2>
-                <p class="text-3xl font-extrabold tracking-tight text-white">Experience & Certifications</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="md:col-span-2 space-y-6">
-                    <h3 class="text-sm font-bold tracking-wider uppercase text-gray-500 mb-4">Professional Roles</h3>
-                    
-                    <div class="relative border-l border-gray-800 pl-6 ml-2 space-y-8">
-                        <div class="relative">
-                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-emerald-500 border-4 border-gray-950"></span>
-                            <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-                                <h4 class="text-lg font-bold text-white">AI & Cloud Virtual Intern</h4>
-                                <span class="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">June 2024 – July 2024</span>
-                            </div>
-                            <p class="text-sm font-medium text-gray-400 mb-3">IBM SkillsBuild</p>
-                            <p class="text-sm text-gray-400 leading-relaxed">
-                                Participated in daily sprints within an Agile layout setting. Built an AI-powered conversational NLP bot schema architecture, yielding a 40% response optimization rate with 85% intent validation accuracy.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="md:col-span-1 space-y-4">
-                    <h3 class="text-sm font-bold tracking-wider uppercase text-gray-500 mb-4">Credentials</h3>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">C Programming</p>
-                            <p class="text-xs text-gray-500">Infosys Certification</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">Python Programming</p>
-                            <p class="text-xs text-gray-500">edX Verified Suite</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">Core & Advanced Java</p>
-                            <p class="text-xs text-gray-500">IT Solutions Engine</p>
-                        </div>
-                    </div>
-                    <div class="bg-gray-900/20 border border-gray-800 p-4 rounded-xl flex items-center gap-3">
-                        <i data-lucide="award" class="w-5 h-5 text-yellow-500 shrink-0"></i>
-                        <div>
-                            <p class="text-sm font-bold text-white">Web Development</p>
-                            <p class="text-xs text-gray-500">edX Cloud Platform</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="border-t border-gray-900 bg-gray-950/40 py-12 text-center text-xs text-gray-500">
-        <p class="mb-2">&copy; 2026 Pampana Dileep. All Rights Reserved.</p>
-        <p>Built with technical optimization via Tailwind CSS & Lucide Interfaces.</p>
-    </footer>
-
+    <!-- Initialize Core Dynamic Icon Rendering -->
     <script>
         lucide.createIcons();
     </script>
